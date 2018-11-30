@@ -1,13 +1,13 @@
 language: java
-jdk:
-    - oraclejdk8
+#jdk:
+#    - oraclejdk8
 
 after_success:
     - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
 
-before_install:
-    - sudo apt-get install -y openjdk-8-jdk --no-install-recommends
-    - sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
+#before_install:
+#    - sudo apt-get install -y openjdk-8-jdk --no-install-recommends
+#    - sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
 # use latest java version available instead of travis default
 # addons:
 #   apt:
